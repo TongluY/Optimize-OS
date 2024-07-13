@@ -1,5 +1,3 @@
-# Project Title: Enhancements in xv6 Kernel
-
 ## Project Introduction
 This project focuses on understanding Unix-style forking and x86 memory management through the implementation of a copy-on-write `fork()` system call and the design of a Stride Scheduler algorithm in the xv6 kernel.
 
