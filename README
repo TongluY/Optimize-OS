@@ -1,8 +1,29 @@
-Project Introduction:
+# Project Introduction
 
-Developed an understanding of Unix-style forking and x86 memory management by implementing a copy-on-write fork() system call in xv6 kernel. This involved writing a trap handler for page faults, augmenting the physical memory management code, and manipulating page tables.
+## Copy-on-Write fork() System Call in xv6 Kernel
 
-Designed and implemented a Stride Scheduler algorithm in xv6 kernel using C. This algorithm assigns tickets to each process and calculates the stride for each process based on the number of tickets. It schedules the process with the minimum pass value in each time slot. Two new system calls were created: settickets(int number) and getpinfo(struct pstat*), which respectively set the number of tickets for a process and return information about running processes.
+- **Objective**: Developed an understanding of Unix-style forking and x86 memory management.
+- **Implementation**: Implemented a copy-on-write fork() system call in the xv6 kernel.
+  - **Details**: 
+    - Wrote a trap handler for page faults.
+    - Augmented the physical memory management code.
+    - Manipulated page tables.
 
-Conducted experiments and generated graphs to demonstrate the performance improvement achieved by implementing copy-on-write and Stride Scheduler in xv6 kernel. The implementation showed a significant reduction in the time required for forking large processes, while the Stride Scheduler algorithm improved the CPU utilization and response time of the system. The graphs and experiments can be used to further optimize the implementation and improve system performance.
+## Stride Scheduler Algorithm in xv6 Kernel
 
+- **Objective**: Designed and implemented a Stride Scheduler algorithm in the xv6 kernel using C.
+- **Algorithm**:
+  - Assigned tickets to each process.
+  - Calculated the stride for each process based on the number of tickets.
+  - Scheduled the process with the minimum pass value in each time slot.
+- **System Calls**:
+  - `settickets(int number)`: Sets the number of tickets for a process.
+  - `getpinfo(struct pstat*)`: Returns information about running processes.
+
+## Performance Evaluation
+
+- **Experiments**: Conducted experiments and generated graphs to demonstrate the performance improvement.
+- **Results**:
+  - Significant reduction in the time required for forking large processes due to copy-on-write implementation.
+  - Improved CPU utilization and response time of the system with the Stride Scheduler algorithm.
+- **Future Work**: The graphs and experiments can be used to further optimize the implementation and improve system performance.
